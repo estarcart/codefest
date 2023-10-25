@@ -1,0 +1,27 @@
+/* INICIO DE LA SECCION DE INICIO */
+.tablero{
+    background-color: red;
+}
+
+.facebook-post {
+    background-color: #f0f2f5; /* Fondo gris claro similar al de Facebook */
+    border: 1px solid #d8d8d8; /* Borde ligero */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interior */
+    width: 100%;
+  }
+  
+  .facebook-post textarea {
+    width: 100%;
+    border: none; /* Quita el borde del textarea */
+    background: none; /* Quita el fondo del textarea */
+    outline: none; /* Quita el resaltado del enfoque (puede variar según el navegador) */
+    resize: none; /* Evita que el usuario pueda redimensionar el textarea */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+  }
+  
+  .facebook-post textarea::placeholder {
+    color: #999; /* Color del texto de marcador de posición */
+  }
+  
