@@ -7,10 +7,19 @@ body{
     padding: 0;
 }
 
+header{
+  display: flex;
+  justify-content: center;
+}
+
 nav{
-    background-color: red;
     display: flex;
     justify-content: flex-start;
+    background-color: #f5f5f5;
+    margin: 1%;
+    width: 50%;
+    flex-direction: column;
+    border-radius: 0.5em;
 }
 
 .navegacion{
@@ -22,20 +31,18 @@ nav ul{
     display: flex;
     text-decoration: none;
     list-style: none;
-}
-
-nav ul li{
-    margin: 0 10%;
+    justify-content: space-around;
 }
 
 nav ul li a{
     text-decoration: none;
     color: inherit;
+    border-radius: 5%;
 }
 
 nav ul li a:hover{
     text-decoration: none;
-    color: white;
+    color: #D81E9C;
 }
 
 .dropdown {
@@ -45,7 +52,7 @@ nav ul li a:hover{
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #9c0000;
+    background-color: #d4d4d4;
     min-width: auto;
     min-height: auto;
     z-index: 1;
@@ -65,5 +72,5 @@ nav ul li a:hover{
   }
   
   .dropdown-content a:hover {
-    color: white;
+    color: #D81E9C;
   }
