@@ -9,11 +9,10 @@ dotenv.config();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const routes = require('src/routes/index');
+const routes = require('./routes/index');
 app.use('/publicacionesAPI', routes);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log('Server is running on port ' + port);
+  console.log('El servidor se está ejecutando en el puerto ' + port);
 });
-
