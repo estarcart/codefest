@@ -1,12 +1,12 @@
 {
-  "name": "userapi",
+  "name": "publicacionesapi",
   "version": "1.0.0",
-  "description": "Codefest user API",
+  "description": "",
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "murlocs",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
