@@ -8,7 +8,7 @@
 }
 
 .facebook-post {
-    background-color: #f0f2f5; /* Fondo gris claro similar al de Facebook */
+    background-color: #f5f5f7; /* Fondo gris claro similar al de Facebook */
     border: 1px solid #d8d8d8; /* Borde ligero */
     border-radius: 8px; /* Bordes redondeados */
     padding: 10px; /* Espaciado interior */
@@ -33,13 +33,17 @@
 
   section{
     width: 73%;
-    background-color: rgb(241, 241, 241);
     display: flex;
-    padding: 2%;
     flex-direction: column;
     border-radius: 1em;
   }
 
+  .botonespu{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+  }
   .upimage{
     display: inline-block;
     padding: 6px 12px;
@@ -48,7 +52,9 @@
     color: #fff; /* Color del texto */
     border-radius: 4px;
     font-weight: bold;
-    margin: 2%;
+    margin-right: 1%;
+    border: none;
+    filter: drop-shadow(0px 5px 4px rgba(0, 0, 0, 0.25));
   }
   .upimage:hover{
     background-color: #c90a50;
@@ -66,7 +72,7 @@
     border: 0;
     border-radius: 4px;
     font-weight: bold;
-    margin: 2%;
+    filter: drop-shadow(0px 5px 4px rgba(0, 0, 0, 0.25));
   }
   .publicar:hover{
     background-color: #9733d4;
@@ -78,7 +84,7 @@
     align-items: center;
     margin: 1%;
     padding: 1%;
-    background-color: #f0f2f5;
+    background-color: #f5f5f7;
     width: 73%;
     border-radius: 0.5em;
   }
@@ -89,19 +95,75 @@
     align-items: center;
     margin: 1%;
     padding: 1%;
-    background-color: #f0f2f5;
+    background-color: #f5f5f7;
     border: 2px solid #bdbdbd;
     border-radius: 1em;
     width: 95%;
     word-break: break-all;
     overflow: auto;
     text-align: start;
+    filter: drop-shadow(0px 5px 4px rgba(0, 0, 0, 0.25));
   }
 
   .publicacion-header{
     width: 100%;
     display: flex;
     padding: 1%;
+  }
+
+  .publicacion-usuario{
+    width: 100%;
+    display: flex;
+  }
+
+  .publicacion-usuario-info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .agregarpersona{
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #D81E9C; /* Color de fondo similar a Twitter */
+    color: #fff; /* Color del texto */
+    border: 0;
+    border-radius: 4px;
+    font-weight: bold;
+    filter: drop-shadow(0px 5px 4px rgba(0, 0, 0, 0.25));
+    margin-right: 5%;
+  }
+
+  .agregarpersona:hover{
+    background-color: #b11880;
+  }
+
+  .seguirpersona{
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #B03CFA; /* Color de fondo similar a Twitter */
+    color: #fff; /* Color del texto */
+    border: 0;
+    border-radius: 4px;
+    font-weight: bold;
+    filter: drop-shadow(0px 5px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .seguirpersona:hover{
+    background-color: #9733d4;
+  }
+
+  .botonesuser{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
   }
 
   .publicacion-body{

@@ -3,14 +3,13 @@ const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
 
-// Configuración de multer para la subida de archivos
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'uploads/'); // Directorio donde se guardarán las imágenes
+        cb(null, 'uploads/'); 
     },
     filename: function (req, file, cb) {
         const imgFileName = `${Date.now()}-${file.originalname}`;
-        cb(null, imgFileName); // Nombre único del archivo
+        cb(null, imgFileName);
     },
 });
 
@@ -28,6 +27,30 @@ exports.getPublish = async (req, res) => {
     }
 };
 
+exports.getPublishImg = (req, res) => {
+    const uploadDir = path.join(__dirname, '../../uploads');
+
+    fs.readdir(uploadDir, (err, files) => {
+        if (err) {
+            console.error('Error al leer el directorio:', err);
+            return res.status(500).json({
+                message: 'Algo ha salido mal'
+            });
+        }
+
+        const fileData = files.map((file) => {
+            const filePath = path.join(uploadDir, file);
+            return {
+                filename: file,
+                path: filePath,
+                size: fs.statSync(filePath).size
+            };
+        });
+
+        res.json(fileData);
+    });
+};
+
 exports.createPublish = upload.single('file'), async (req, res) => {
     try {
         const { textPublication, userName } = req.body;
@@ -39,19 +62,16 @@ exports.createPublish = upload.single('file'), async (req, res) => {
             });
         }
 
-        // Directorio donde se guardarán las imágenes (en la misma ubicación que tu archivo)
-        const uploadDir = path.join(__dirname, 'uploads');
+        const uploadDir = path.join(__dirname, '../../uploads');
         if (!fs.existsSync(uploadDir)) {
             fs.mkdirSync(uploadDir);
         }
 
-        // Ruta completa de la imagen
         const imgPath = path.join(uploadDir, imgFile.filename);
 
-        // Inserta la información en la base de datos, incluyendo la ruta de la imagen
         const [result] = await conn.execute(
             'INSERT INTO publicacion (imgRoute, videoRoute, textPublication, userName) VALUES (?, ?, ?, ?)',
-            [imgPath, '', textPublication, userName] // Cambio en esta línea
+            [imgPath, '', textPublication, userName]
         );
 
         const insertedId = result.insertId;
