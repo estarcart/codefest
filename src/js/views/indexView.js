@@ -15,15 +15,13 @@ export default class IndexView{
             <main>
                 <div class="container text-center">
                     <div class="row">
-                        <div class="col"></div>
-                        <div class="col">
                             <div class="contenedor">
                                 <div class="container-in">
                                     <div class="logo">
-                                        <img src="../public/img/logo.png" alt="Pontilaunch">
+                                        <h5>Pontilaunch</h5>
                                     </div>
                                     <div class="form">
-                                        <form id="loginForm" action="http://localhost:3000/login" method="post">
+                                        <form id="loginForm" action="http://localhost:8000/login" method="post">
                                             <input type="email" name="email" id="email" placeholder="Correo electronico"
                                                 required>
                                             <input type="password" name="password" id="password" placeholder="Password"
@@ -37,10 +35,8 @@ export default class IndexView{
                                 </div>
                             </div>
                         </div>
-                        <div class="col"></div>
                     </div>
             </main>
-            <script src="app.js"></script>
         </body>
         
         </html>
