@@ -1,6 +1,10 @@
 /* INICIO DE LA SECCION DE INICIO */
 .tablero{
-    background-color: red;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 .facebook-post {
@@ -8,7 +12,8 @@
     border: 1px solid #d8d8d8; /* Borde ligero */
     border-radius: 8px; /* Bordes redondeados */
     padding: 10px; /* Espaciado interior */
-    width: 100%;
+    width: 80%;
+    height: 5em;
   }
   
   .facebook-post textarea {
@@ -16,7 +21,8 @@
     border: none; /* Quita el borde del textarea */
     background: none; /* Quita el fondo del textarea */
     outline: none; /* Quita el resaltado del enfoque (puede variar según el navegador) */
-    resize: none; /* Evita que el usuario pueda redimensionar el textarea */
+    resize: none;
+    overflow: none; /* Evita que el usuario pueda redimensionar el textarea */
     font-size: 16px; /* Tamaño de fuente */
     color: #333; /* Color del texto */
   }
@@ -24,4 +30,90 @@
   .facebook-post textarea::placeholder {
     color: #999; /* Color del texto de marcador de posición */
   }
-  
+
+  section{
+    width: 73%;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    padding: 2%;
+    flex-direction: column;
+    border-radius: 1em;
+  }
+
+  .upimage{
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #F10C61; /* Color de fondo similar a Twitter */
+    color: #fff; /* Color del texto */
+    border-radius: 4px;
+    font-weight: bold;
+    margin: 2%;
+  }
+  .upimage:hover{
+    background-color: #c90a50;
+  }
+  .upimage1{
+    display: none;
+  }
+
+  .publicar{
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #B03CFA; /* Color de fondo similar a Twitter */
+    color: #fff; /* Color del texto */
+    border: 0;
+    border-radius: 4px;
+    font-weight: bold;
+    margin: 2%;
+  }
+  .publicar:hover{
+    background-color: #9733d4;
+  }
+
+  article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1%;
+    padding: 1%;
+    background-color: #f0f2f5;
+    width: 73%;
+    border-radius: 0.5em;
+  }
+
+  .publicacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1%;
+    padding: 1%;
+    background-color: #f0f2f5;
+    border: 2px solid #bdbdbd;
+    border-radius: 1em;
+    width: 95%;
+  }
+
+  .publicacion-header{
+    width: 100%;
+    display: flex;
+    padding: 1%;
+  }
+
+  .publicacion-body{
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .textopubli{
+    width: auto;
+    height: auto;
+  }
+  .imagenpubli{
+    display: flex;
+  }

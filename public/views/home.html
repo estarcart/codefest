@@ -15,13 +15,13 @@
             <li><a href="">Inicio</a></li>
             <li><a href="/public/views/transmisiones.html">Transmisiones</a></li>
             <li class="dropdown">
-                <a href="#">Social</a>
+                <a href="">Social</a>
                 <div class="dropdown-content">
                     <a href="#">Amigos</a>
                     <a href="#">Grupos</a>
                 </div>
             </li>
-            <li><a href="#">Salir</a></li>
+            <li><a href="/public/views/index.html">Salir</a></li>
         </ul>
     </nav>
 </header>
@@ -30,32 +30,38 @@
         <div class="row align-items-center">
           <div class="col tablero">
             <section>
-                <header>
                     <form action="publicar.php" method="post">
                         <div>
                           <textarea id="post-text" class="facebook-post" name="post-text" placeholder="Que tienes pensado publicar?"></textarea>
                         </div>
                         <div>
-                          <label for="post-image">Add an image (optional)</label>
-                          <input type="file" id="post-image" name="post-image">
+                          <label for="post-image" class="upimage">Imagen</label>
+                          <input type="file" id="post-image" name="post-image" class="upimage1">
+                          <button type="submit" class="publicar">Publicar</button>
                         </div>
-                        <button type="submit">Publicar</button>
-                      </form>
-                </header>
+                    </form>
             </section>
             <article>
                 <div class="publicacion">
                     <div class="publicacion-header">
                         <div class="publicacion-usuario">
                             <div class="publicacion-usuario-info">
-                                <h3>Usuario</h3>
+                                <h5>Nombre de usuario</h5>
                             </div>
                         </div>
                     </div>
                     <div class="publicacion-body">
-                        <p>Contenido</p>
+                        <div class="textopubli">
+                            <p>HolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaaHolaaaaaaa</p>
+                        </div>
+                        <div class="imagenpubli">
+                            <div>
+                                <img src="/public/logo.png" alt="" srcset="">
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
             </article>
           </div>
         </div>
