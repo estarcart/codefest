@@ -10,38 +10,58 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown link
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-            </ul>
+    <nav>
+        <ul class="navegacion">
+            <li><a href="">Inicio</a></li>
+            <li><a href="/public/views/transmisiones.html">Transmisiones</a></li>
+            <li class="dropdown">
+                <a href="#">Social</a>
+                <div class="dropdown-content">
+                    <a href="#">Amigos</a>
+                    <a href="#">Grupos</a>
+                </div>
+            </li>
+            <li><a href="#">Salir</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="container text-center">
+        <div class="row align-items-center">
+          <div class="col tablero">
+            <section>
+                <header>
+                    <form action="publicar.php" method="post">
+                        <div>
+                          <textarea id="post-text" class="facebook-post" name="post-text" placeholder="Que tienes pensado publicar?"></textarea>
+                        </div>
+                        <div>
+                          <label for="post-image">Add an image (optional)</label>
+                          <input type="file" id="post-image" name="post-image">
+                        </div>
+                        <button type="submit">Publicar</button>
+                      </form>
+                </header>
+            </section>
+            <article>
+                <div class="publicacion">
+                    <div class="publicacion-header">
+                        <div class="publicacion-usuario">
+                            <div class="publicacion-usuario-info">
+                                <h3>Usuario</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publicacion-body">
+                        <p>Contenido</p>
+                    </div>
+                </div>
+            </article>
           </div>
         </div>
-      </nav>
-</header>
+      </div>
+
+</main>
 
 </body>
 </html>
