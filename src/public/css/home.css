@@ -92,7 +92,7 @@
     background-color: #f0f2f5;
     border: 2px solid #bdbdbd;
     border-radius: 1em;
-    max-width: 95%;
+    width: 95%;
     word-break: break-all;
     overflow: auto;
     text-align: start;
