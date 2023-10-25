@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 
 router.get('/publish', getPublish);
 
-router.post('/publish', createPublish);
+router.post('/upload', createPublish);
 
 module.exports = router;
 
