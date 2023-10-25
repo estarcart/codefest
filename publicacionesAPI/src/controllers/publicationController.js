@@ -5,7 +5,7 @@ const path = require('path');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'uploads/'); 
+        cb(null, 'uploads/');
     },
     filename: function (req, file, cb) {
         const imgFileName = `${Date.now()}-${file.originalname}`;
@@ -28,7 +28,7 @@ exports.getPublish = async (req, res) => {
 };
 
 exports.getPublishImg = (req, res) => {
-    const uploadDir = path.join(__dirname, '../../uploads');
+    const uploadDir = path.join(__dirname, 'uploads'); // Ruta al directorio de imágenes (asegúrate de que esté en la ubicación correcta)
 
     fs.readdir(uploadDir, (err, files) => {
         if (err) {
@@ -62,16 +62,18 @@ exports.createPublish = upload.single('file'), async (req, res) => {
             });
         }
 
-        const uploadDir = path.join(__dirname, '../../uploads');
+        const imgFileName = imgFile.filename;
+
+        const uploadDir = path.join(__dirname, 'uploads'); // Ruta al directorio de imágenes (asegúrate de que esté en la ubicación correcta)
         if (!fs.existsSync(uploadDir)) {
             fs.mkdirSync(uploadDir);
         }
 
-        const imgPath = path.join(uploadDir, imgFile.filename);
+        const imgPath = path.join(uploadDir, imgFileName);
 
         const [result] = await conn.execute(
             'INSERT INTO publicacion (imgRoute, videoRoute, textPublication, userName) VALUES (?, ?, ?, ?)',
-            [imgPath, '', textPublication, userName]
+            [imgFileName, '', textPublication, userName]
         );
 
         const insertedId = result.insertId;
