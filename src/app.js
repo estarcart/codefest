@@ -1,12 +1,7 @@
-// Importa las vistas, modelos y controladores necesarios
-import registerView from './views/registerView';
-import registerController from './controllers/registerController';
-import indexController from './controllers/indexController';
+import IndexView from './js/views/indexView.js';
+import IndexController from './js/controllers/indexController.js';
 
-const registerView = new registerView();
-const registerController = new registerController(registerView);
-const indexController = new indexController();
+const indexView = new IndexView();
+const indexController = new IndexController(indexView);
 
-
-// Inicializa la aplicación
 indexController.render();
