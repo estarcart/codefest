@@ -1,9 +1,8 @@
 {
-  "name": "userapi",
+  "name": "mvcfest",
   "version": "1.0.0",
   "description": "Codefest user API",
   "main": "src/app.js",
-  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/app.js"
@@ -19,5 +18,6 @@
     "jsonwebtoken": "^9.0.2",
     "mysql": "^2.18.1",
     "mysql2": "^3.6.2"
-  }
+  },
+  "devDependencies": {}
 }
