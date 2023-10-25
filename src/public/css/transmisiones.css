@@ -1,11 +1,11 @@
-.tablero{
+  .tablero{
     padding: 1%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-}
-  
+    justify-content: center;
+  }
   article{
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@
     margin: 1%;
     padding: 1%;
     background-color: #f0f2f5;
-    width: 73%;
+    width: 50%;
     border-radius: 0.5em;
   }
 
@@ -26,7 +26,7 @@
     background-color: #f0f2f5;
     border: 2px solid #bdbdbd;
     border-radius: 1em;
-    width: 95%;
+    width: 100%;
     word-break: break-all;
     overflow: auto;
     text-align: start;
@@ -40,15 +40,83 @@
 
   .publicacion-body{
     width: 100%;
-    height: 100%;
+    height: 20em;
     padding: 1%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
   }
 
   .textopubli{
     width: auto;
     height: auto;
   }
+
+  aside{
+    background-color: #e2e2e2;
+    width: 25%;
+    border-radius: 1em;
+  }
+  .chat{
+    margin: 1%;
+    padding: 1%;
+  }
+
+  .chat-header{
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+    border-bottom: 1px solid #969696;
+  }
+
+  .chat-body{
+    height: 25em;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: auto;
+    word-break: break-all;
+    text-align: start;
+  }
+
+  .chat-mensaje{
+    margin: 0.5em;
+    background-color: #ffffff;
+    padding: 0.5em;
+    border-radius: 0.5em;
+  }
+
+  .chat-mensaje p{
+    margin: 0;
+  }
+
+  .chat-footer{
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+    flex-direction: row;
+  }
+
+  .chat-footer .chatbox{
+    width: 65%;
+    border-radius: 1em;
+    border: 1px solid #969696;
+    padding: 0.5em;
+    margin-block: 0.5em;
+  }
+  .chat-footer .submitchatbox{
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #B03CFA; /* Color de fondo similar a Twitter */
+    color: #fff; /* Color del texto */
+    border: 0;
+    border-radius: 4px;
+    font-weight: bold;
+    margin: 2%;
+  }
+
 
