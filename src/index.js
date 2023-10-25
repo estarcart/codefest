@@ -1,15 +1,4 @@
-//MVC Frontend index.js with express 
 const express = require('express');
 const app = express();
-
-const port = 8000;
-
-// Ruta de archivos estáticos (HTML, CSS, JS)
-app.use(express.static('./public'));
-
-const homeController = require('./controllers/homeController');
-app.get('/', homeController.index);
-
-app.listen(port, () => {
-  console.log('Servidor escuchando en el puerto ' + port);
-});
+const PORT = process.env.PORT || 4111;
+app.listen(PORT, console.log("Server running in port " + PORT))
