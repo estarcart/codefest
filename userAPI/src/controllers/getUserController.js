@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const conn = require('../config/dbConnection');
+const conn = require('../config/dbConnection').promise();
 
 exports.getUser = async (req,res,next) => {
 
@@ -16,7 +16,7 @@ exports.getUser = async (req,res,next) => {
         }
 
         const theToken = req.headers.authorization.split(' ')[1];
-        const decoded = jwt.verify(theToken, process.env.JWT_SECRET);
+        const decoded = jwt.verify(theToken, 'sklatt75wZ/9ZOd7Yova32AyYKCXj20M4HnFctJrfVK4BcQ00CdC2E3K0etBBtYf');
 
         const [row] = await conn.execute(
             "SELECT `id`,`name`,`email` FROM `users` WHERE `id`=?",

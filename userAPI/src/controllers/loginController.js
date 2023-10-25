@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const {validationResult} = require('express-validator');
-const conn = require('../config/dbConnection');
+const conn = require('../config/dbConnection').promise();
 
 
 exports.login = async (req,res,next) =>{
@@ -31,7 +31,7 @@ exports.login = async (req,res,next) =>{
             });
         }
 
-        const theToken = jwt.sign({id:row[0].id},process.env.JWT_SECRET,{ expiresIn: '1h' });
+        const theToken = jwt.sign({id:row[0].id},'sklatt75wZ/9ZOd7Yova32AyYKCXj20M4HnFctJrfVK4BcQ00CdC2E3K0etBBtYf',{ expiresIn: '1h' });
 
         return res.json({
             token:theToken

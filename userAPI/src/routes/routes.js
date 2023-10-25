@@ -5,7 +5,7 @@ const { login } = require('../controllers/loginController');
 const { getUser } = require('../controllers/getUserController');
 
 router.post('/register', [
-  body('name', "The name must be of minimum 3 characters length")
+  body('name', "The name must be of minimum 4 characters length")
     .notEmpty()
     .escape()
     .trim()
@@ -15,11 +15,6 @@ router.post('/register', [
     .escape()
     .trim()
     .isEmail(),
-  body('username', "The username must be of minimum 4 characters length")
-    .notEmpty()
-    .escape()
-    .trim()
-    .isLength({ min: 4 }),
   body('password', "The Password must be of minimum 8 characters length")
     .notEmpty()
     .trim()
